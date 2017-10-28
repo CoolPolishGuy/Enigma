@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping catalog="enigma" package="com.loanlassalle.enigma.manager.models">
+    <class name="com.loanlassalle.enigma.manager.models.Riddle" dynamic-update="true">
+        <id name="idRiddle">
+            <generator class="native"/>
+        </id>
+        <property name="Question" not-null="true"/>
+        <property name="Answer1" not-null="true"/>
+        <property name="Answer2"/>
+        <property name="Answer3"/>
+    </class>
+</hibernate-mapping>

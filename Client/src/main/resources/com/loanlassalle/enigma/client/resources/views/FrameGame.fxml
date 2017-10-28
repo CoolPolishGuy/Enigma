@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="1000.0" prefWidth="1600.0"
+            style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.112"
+            fx:controller="com.loanlassalle.enigma.client.views.ControllerFrameGame">
+    <TextArea fx:id="textAreaChat" editable="false" layoutX="1260.0" layoutY="14.0"
+              prefHeight="506.0" prefWidth="330.0" wrapText="true"/>
+    <TextField fx:id="seizureChat" layoutX="1260.0" layoutY="559.0" onAction="#onEnter"
+               prefHeight="26.0" prefWidth="330.0"/>
+    <Button layoutX="1518.0" layoutY="526.0" mnemonicParsing="false" onAction="#sendMessageToChat"
+            text="Envoyer"/>
+    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#leave" text="Retour"/>
+    <TableView fx:id="scores" layoutX="14.0" layoutY="90.0" prefHeight="323.0" prefWidth="224.0">
+        <columns>
+            <TableColumn fx:id="columnName" prefWidth="149.00001525878906" text="Noms"/>
+            <TableColumn fx:id="columnScore" prefWidth="72.00003051757812" text="Scores"/>
+        </columns>
+    </TableView>
+    <Pane fx:id="imageAreaStatesPlayers" layoutY="615.0" prefHeight="371.0" prefWidth="1594.0">
+        <ImageView fx:id="iv1" fitHeight="187.0" fitWidth="149.0" layoutX="14.0" layoutY="186.0"
+                   pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv2" fitHeight="187.0" fitWidth="149.0" layoutX="167.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv3" fitHeight="187.0" fitWidth="149.0" layoutX="334.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv4" fitHeight="187.0" fitWidth="149.0" layoutX="494.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv5" fitHeight="187.0" fitWidth="149.0" layoutX="654.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv6" fitHeight="187.0" fitWidth="149.0" layoutX="814.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv7" fitHeight="187.0" fitWidth="149.0" layoutX="974.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv8" fitHeight="187.0" fitWidth="149.0" layoutX="1134.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv9" fitHeight="187.0" fitWidth="149.0" layoutX="1294.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <ImageView fx:id="iv10" fitHeight="187.0" fitWidth="149.0" layoutX="1454.0"
+                   layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@Ndrunk.jpg"/>
+        </ImageView>
+        <Label fx:id="namePlayer1" layoutX="14.0" layoutY="90.0" text="Label" visible="false"/>
+        <Label fx:id="namePlayer2" layoutX="174.0" layoutY="90.0" text="Label" visible="false"/>
+        <Label fx:id="namePlayer3" layoutX="334.0" layoutY="90.0" text="Label" visible="false"/>
+        <Label fx:id="namePlayer4" layoutX="494.0" layoutY="90.0" text="Label" visible="false"/>
+        <Label fx:id="namePlayer5" layoutX="654.0" layoutY="90.0" text="Label" visible="false"/>
+        <Label fx:id="namePlayer6" layoutX="814.0" layoutY="90.0" text="Label" visible="false"/>
+        <Label fx:id="namePlayer7" layoutX="974.0" layoutY="90.0" text="Label" visible="false"/>
+        <Label fx:id="namePlayer8" layoutX="1134.0" layoutY="90.0" text="Label"
+               visible="false"/>
+        <Label fx:id="namePlayer9" layoutX="1294.0" layoutY="90.0" text="Label"
+               visible="false"/>
+        <Label fx:id="namePlayer10" layoutX="1454.0" layoutY="90.0" text="Label"
+               visible="false"/>
+    </Pane>
+    <TextField fx:id="textFieldAnswer" layoutX="427.0" layoutY="317.0" onAction="#onEnterAnswer"
+               prefHeight="26.0" prefWidth="746.0"/>
+    <TextArea fx:id="textAreaQuestion" editable="false" layoutX="427.0" layoutY="171.0"
+              prefHeight="114.0" prefWidth="746.0" wrapText="true"/>
+    <Button fx:id="buttonSendAnswer" disable="true" layoutX="427.0" layoutY="351.0"
+            mnemonicParsing="false" onAction="#sendAnswer" text="Envoyer"/>
+    <Label layoutX="299.0" layoutY="216.0" text="Question">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+    <Label layoutX="300.0" layoutY="318.0" text="Réponse">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+
+    <Label fx:id="labelCorrect" layoutX="451.0" layoutY="292.0" text="Correct !" textFill="#12bf09"
+           visible="false"/>
+    <Label fx:id="labelFalse" layoutX="524.0" layoutY="292.0" text="Faux !" textFill="#da1111"
+           visible="false"/>
+    <ProgressBar fx:id="progressBar" layoutX="298.0" layoutY="90.0" prefWidth="200.0" progress="0.0"
+                 visible="false"/>
+    <Label layoutX="298.0" layoutY="59.0" text="Temps:">
+        <font>
+            <Font size="15.0"/>
+        </font>
+    </Label>
+    <Label fx:id="labelTimer" layoutX="375.0" layoutY="59.0" text="00:00" visible="false">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </Label>
+    <Label layoutX="594.0" layoutY="292.0" text="Essais restants: "/>
+    <Label fx:id="labelAttempts" layoutX="701.0" layoutY="292.0" prefHeight="16.0"
+           prefWidth="35.0"/>
+    <Label fx:id="labelRound" layoutX="427.0" layoutY="120.0" prefHeight="18.0" prefWidth="72.0">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+</AnchorPane>

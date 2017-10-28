@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" vgap="10"
+          xmlns="http://javafx.com/javafx/8.0.112"
+          fx:controller="com.loanlassalle.enigma.client.views.ControllerFrameRooms">
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+    </rowConstraints>
+    <Pane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #FFFFFF;">
+        <TextField fx:id="textFieldLogin" layoutX="168.0" layoutY="69.0" onAction="#onEnter"/>
+        <Label layoutX="103.0" layoutY="74.0" text="Login"/>
+        <TableView id="tableView" fx:id="tableRooms" layoutX="14.0" layoutY="282.0"
+                   maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                   minWidth="-Infinity" onMouseClicked="#getSelectedRoom" prefHeight="504.0"
+                   prefWidth="615.0" stylesheets="tableView.css">
+            <columns>
+                <TableColumn fx:id="columnRooms" editable="false" minWidth="-Infinity"
+                             prefWidth="150" resizable="false" sortable="false" text="Salons"/>
+                <TableColumn fx:id="columnPlayers" editable="false" prefWidth="150"
+                             resizable="false" sortable="false" text="Joueurs"/>
+                <TableColumn fx:id="columnQuestions" editable="false" prefWidth="150"
+                             resizable="false" sortable="false" text="Questions"/>
+                <TableColumn fx:id="columnScore" editable="false" prefWidth="150" resizable="false"
+                             sortable="false" text="Points"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+        <Button layoutX="276.0" layoutY="110.0" mnemonicParsing="false" onAction="#connectionRoom"
+                text="Entrer"/>
+        <ImageView fitHeight="245.0" fitWidth="555.0" layoutX="732.0" layoutY="22.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <Image url="@logo.jpg"/>
+        </ImageView>
+        <Button layoutX="14.0" layoutY="233.0" mnemonicParsing="false" onAction="#refresh"
+                style="-fx-background-color: FFFFFF;">
+            <graphic>
+                <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@reload.jpeg"/>
+                </ImageView>
+            </graphic>
+        </Button>
+    </Pane>
+</GridPane>

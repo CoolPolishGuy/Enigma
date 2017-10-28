@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="538.0" prefWidth="786.0"
+            xmlns="http://javafx.com/javafx/8.0.112"
+            fx:controller="com.loanlassalle.enigma.manager.controllers.ControllerAdmin">
+    <Label layoutX="30.0" layoutY="27.0" prefHeight="17.0" prefWidth="150.0"
+           text="Nombre d'énigmes : "/>
+    <Label fx:id="totalRiddle" layoutX="180.0" layoutY="28.0" prefHeight="16.0" prefWidth="69.0"/>
+    <ComboBox fx:id="riddleCombobox" layoutX="168.0" layoutY="89.0" onAction="#displayRiddle"
+              prefHeight="31.0"
+              prefWidth="393.0"/>
+    <Label layoutX="69.0" layoutY="209.0" text="Question"/>
+    <TextArea fx:id="questionField" layoutX="168.0" layoutY="174.0" prefHeight="86.0"
+              prefWidth="393.0"/>
+    <Label layoutX="65.0" layoutY="304.0" text="Réponse 1"/>
+    <TextField fx:id="answer1Field" layoutX="168.0" layoutY="297.0" prefHeight="31.0"
+               prefWidth="393.0"/>
+    <Label layoutX="65.0" layoutY="371.0" text="Réponse 2"/>
+    <TextField fx:id="answer2Field" layoutX="168.0" layoutY="364.0" prefHeight="31.0"
+               prefWidth="393.0"/>
+    <Label layoutX="65.0" layoutY="428.0" text="Réponse 3"/>
+    <TextField fx:id="answer3Field" layoutX="168.0" layoutY="421.0" prefHeight="31.0"
+               prefWidth="393.0"/>
+    <Button fx:id="validateButton" layoutX="686.0" layoutY="379.0" mnemonicParsing="false"
+            onAction="#validateRiddle"
+            prefHeight="31.0" prefWidth="89.0" text="Valider"/>
+    <Button fx:id="deleteButton" layoutX="686.0" layoutY="433.0" mnemonicParsing="false"
+            onAction="#deleteRiddle"
+            prefHeight="31.0" prefWidth="89.0" text="Supprimer"/>
+    <Button fx:id="closeButton" layoutX="686.0" layoutY="22.0" mnemonicParsing="false"
+            onAction="#closeButtonAction"
+            prefHeight="31.0" prefWidth="89.0" text="Fermer"/>
+</AnchorPane>
